@@ -17,15 +17,16 @@ const (
 	// Version is the version number of the library
 	Version string = "1.0.0"
 
-	// DefaultAlphabet is the default alphabet used by go-hashids
-	DefaultAlphabet string = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
-
 	minAlphabetLength int     = 16
 	sepDiv            float64 = 3.5
 	guardDiv          float64 = 12.0
 )
 
-var sepsOriginal = []rune("cfhistuCFHISTU")
+var (
+	sepsOriginal = []rune("cfhistuCFHISTU")
+	// DefaultAlphabet is the default alphabet used by go-hashids
+	DefaultAlphabet string = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+)
 
 // HashID contains everything needed to encode/decode hashids
 type HashID struct {
